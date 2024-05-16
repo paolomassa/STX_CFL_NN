@@ -18,3 +18,6 @@ The [dataset](dataset) folder contains the training, validation and test set fil
 
 # Model definition and training
 The [train_nn.ipynb](train_nn.ipynb) notebook shows how the neural network is defined and trained. Auxiliary functions used for defining the model and for normaliziong the dataset contained in [aux_code.py](aux_code.py).
+
+# Quantized model predictions on the test set
+The [test_quantized_nn.ipynb](test_quantized_nn.ipynb) notebook shows how to quantized the neural network inputs, weights and biased in such a way that all the operations in the forward pass are performed in 16-bit fixed-point integer arithmetic. The operations performed by the quantized neural network are implemented in [nn_model](https://github.com/paolomassa/STX_CFL_NN/blob/a5fc18334ae50416a1f550097626fd2027243cab/aux_code.py#L107C5-L107C13). A comparison with the flare locations estimates provided by the CFL algorithm is also shown in the notebook.
