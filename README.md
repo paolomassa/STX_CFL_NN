@@ -15,3 +15,6 @@ The [dataset](dataset) folder contains the training, validation and test set fil
 * tot_counts_cfl: array of dimension N_events containing the total number of counts registered by the STIX CFL detector for each example
 * sidelobes_ratio: array of dimension N_events an estimate of the reliability of the flare location derived from STIX imaging (ratio between the peak flux and the sidelobes' flux)
 * file_uid: array of dimension N_event containing the UID of the STIX FITS file from which the data are extracted 
+
+# Model definition and training
+The [train_nn.ipynb](train_nn.ipynb) notebook shows how the neural network is defined and trained. Auxiliary functions used for defining the model and for normaliziong the dataset contained in [aux_code.py](aux_code.py).
