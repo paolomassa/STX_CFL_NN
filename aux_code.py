@@ -104,13 +104,13 @@ def normalize_quantized_dataset(x_nn, SCALE=11):
 
 #------------- DEFINE QUANTIZED NETWORK
 
-def nn_model(inputs, 
-             weightsI1, bias1,
-             weights12, bias2,
-             weights23, bias3,
-             weights3O, biasO,
-             SCALE = 11,
-             int_type=np.int32):
+def quantized_nn_model(inputs, 
+                       weightsI1, bias1,
+                       weights12, bias2,
+                       weights23, bias3,
+                       weights3O, biasO,
+                       SCALE = 11,
+                       int_type=np.int32):
     """
     This function provides predictions of the quantized MLP for a single input data. 
     The input data must be an integer array which has been appropriately normalized with the function 'normalize_quantized_dataset' using the same scale factor.
